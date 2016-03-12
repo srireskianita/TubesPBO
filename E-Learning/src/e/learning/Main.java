@@ -48,6 +48,7 @@ public class Main {
         
         //sebelum remove
         d1.display();
+        
         d1.getKelas(0).displayKelas();
         d1.getKelas(1).displayKelas();
         d2.display();
