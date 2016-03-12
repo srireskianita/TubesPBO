@@ -62,7 +62,6 @@ public class Kelas {
             System.out.println("Nama Mahasiswa: "+getMahasiswabyIndex(j).getNama());
             System.out.println("NIM Mahasiswa: "+getMahasiswabyIndex(j).getId());
             System.out.println();
-         }
-        
+         }        
     }
 }
