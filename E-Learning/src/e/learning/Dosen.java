@@ -27,10 +27,10 @@ public class Dosen extends Orang{
     }
     public void removeKelas(int index){
 	if (daftarkelas[index] != null)
-	for (int j=index ; j<10/*panjang array*/ && daftarkelas[j+1] != null ; j++ ){
-		daftarkelas[j]= daftarkelas[j+1];
-			daftarkelas[j+1]=null;
+	for (int i=index+1 ; i<jumKelas;i++ ){
+		daftarkelas[i-1]= daftarkelas[i];
             }
+        jumKelas--;
 	}
     public void createKelas(String namaKelas){
         
