@@ -38,7 +38,9 @@ public class Kelas {
     public Tugas getTugas(int index){
         return tugas[index];
     }
-    
+    public String getNamakelas(){
+        return namaKelas;
+    }
     public void createTugas(String kodeTgs){
            if(jumTugas< tugas.length){
             tugas[jumTugas] = new Tugas(kodeTgs);
@@ -46,6 +48,7 @@ public class Kelas {
         }
     }
     public void displayKelas(){
+            System.out.println("Kelas: "+getNamakelas());
             System.out.println("MATAKULIAH");
             System.out.println("Nama Matakuliah: "+getMatakuliah().getNamaMk());
             System.out.println("Kode Matakuliah: "+getMatakuliah().getKodeMk());
@@ -62,7 +65,6 @@ public class Kelas {
             System.out.println("Nama Mahasiswa: "+getMahasiswabyIndex(j).getNama());
             System.out.println("NIM Mahasiswa: "+getMahasiswabyIndex(j).getId());
             System.out.println();
-         }
-        
+         }        
     }
 }
