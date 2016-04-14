@@ -244,7 +244,7 @@ public class Aplikasi {
         int n;
         System.out.println("Tambah Mahasiswa di Kelas");
         Scanner input=new Scanner(System.in);
-        System.out.println("NIP Mahasiswa : ");
+        System.out.println("NIM Mahasiswa : ");
         IdMhs = input.nextLong();
         System.out.println("NIP Dosen yang menginput : ");
         IdDosen = input.nextLong();
