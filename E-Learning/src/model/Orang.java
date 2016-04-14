@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package e.learning;
+package model;
 
 /**
  *
@@ -40,5 +40,8 @@ public abstract class Orang{
 		setNama(nama);
 		setId(id);
 	}
+        public Orang(long id){
+            this.id=id;
+        }
 	public abstract void display();
 }
