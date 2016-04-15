@@ -149,6 +149,7 @@ public class Aplikasi {
         Dosen d = new Dosen (nama,IdDosen);
         d.setKdDosen(kodeDosen);
         addDosen(d);
+        System.out.println("Data Dosen Berhasil diInput");
     }
    
     public void Menu2() { //add Data Mahasiswa
@@ -166,6 +167,7 @@ public class Aplikasi {
         Mahasiswa m = new Mahasiswa(nama,IdMhs);
         m.setSmt(semester);
         addMahasiswa(m);
+         System.out.println("Data Mahasiswa Berhasil diInput");
     }
     
     public void Menu3() {//add data Matakuliah
@@ -178,6 +180,7 @@ public class Aplikasi {
         namaMK = input.nextLine();
         Matakuliah t = new Matakuliah(KodeMK,namaMK);
         addMatakuliah(t);       
+         System.out.println("Data Matakuliah Berhasil diInput");
     }
     
     public void Menu4() { //Cari Mahasiswa
@@ -218,6 +221,7 @@ public class Aplikasi {
         System.out.println("NIM Mahasiswa : ");
         IdMhs = input.nextLong();
         deleteMahasiswa(IdMhs);
+         System.out.println("Data Mahasiswa Berhasil di Hapus");
     }
     
     public void Menu8() {//Delete Data Dosen
@@ -227,6 +231,7 @@ public class Aplikasi {
         System.out.println("NIP Dosen : ");
         IdDosen = input.nextLong();
         deleteDosen(IdDosen);
+         System.out.println("Data Dosen Berhasil di Hapus");
     }
     
     public void Menu9() {//delete data Matakuliah
@@ -236,6 +241,7 @@ public class Aplikasi {
         System.out.println("Kode Matakuliah : ");
         KodeMK = input.nextLine();
         deleteMatkul(KodeMK);
+         System.out.println("Data Matakuliah Berhasil di Hapus");
     }
     
     public void Menu10() { //Menu Tambah Mahasiswa

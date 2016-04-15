@@ -7,8 +7,10 @@ package controller;
 
 import View.*;
 import Model.*;
-import java.awt.event.*;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ControllerInputMahasiswa {
+public class ControllerInputMahasiswa implements ActionListener{
     
 }
