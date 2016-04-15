@@ -5,6 +5,8 @@
  */
 package model;
 
+import controller.ControllerViewMahasiswa;
+
 /**
  *
  * @author LENOVO X230
@@ -12,7 +14,9 @@ package model;
 
 public class Driver {
     public static void main(String[] args) {
-        Aplikasi apk= new Aplikasi();
-        apk.MainMenu();
+//       Aplikasi apk= new Aplikasi();
+//       apk.MainMenu();
+
+       ControllerViewMahasiswa cont = new ControllerViewMahasiswa();
     }
 }

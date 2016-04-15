@@ -5,6 +5,9 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Widodo
@@ -33,15 +36,18 @@ public class TambahMahasiswa extends javax.swing.JFrame {
         txtTambahMhs = new javax.swing.JTextField();
         txtNipDosen = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtTambahMhs1 = new javax.swing.JTextField();
+        Kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Tambahkan Mahasiswa di Kelas");
 
-        jLabel2.setText("NIM Mahasiswa");
+        jLabel2.setText("NIM");
 
-        jLabel3.setText("NIP Dosen yang menginput");
+        jLabel3.setText("NIP Dosen");
 
         txtTambahMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,42 +55,74 @@ public class TambahMahasiswa extends javax.swing.JFrame {
             }
         });
 
+        txtNipDosen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNipDosenActionPerformed(evt);
+            }
+        });
+
         btnSubmit.setText("Submit");
+
+        jLabel4.setText("Kelas");
+
+        txtTambahMhs1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTambahMhs1ActionPerformed(evt);
+            }
+        });
+
+        Kembali.setText("Kembali");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
+                            .addComponent(jLabel4)
                             .addComponent(jLabel3))
-                        .addGap(30, 30, 30)
+                        .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTambahMhs, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(btnSubmit)
-                            .addComponent(txtNipDosen)))))
+                            .addComponent(txtTambahMhs1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSubmit)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Kembali))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1)))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel1)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(46, 46, 46))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtTambahMhs1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(36, 36, 36)
-                .addComponent(btnSubmit)
-                .addContainerGap(76, Short.MAX_VALUE))
+                    .addComponent(btnSubmit)
+                    .addComponent(Kembali))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
@@ -93,6 +131,14 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     private void txtTambahMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTambahMhsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTambahMhsActionPerformed
+
+    private void txtNipDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNipDosenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNipDosenActionPerformed
+
+    private void txtTambahMhs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTambahMhs1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTambahMhs1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,11 +177,35 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Kembali;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtNipDosen;
     private javax.swing.JTextField txtTambahMhs;
+    private javax.swing.JTextField txtTambahMhs1;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnSubmit() {
+        return btnSubmit;
+    }
+
+    public JTextField getTxtNipDosen() {
+        return txtNipDosen;
+    }
+
+    public JTextField getTxtTambahMhs() {
+        return txtTambahMhs;
+    }
+
+    public JTextField getTxtTambahMhs1() {
+        return txtTambahMhs1;
+    }
+
+    public JButton getKembali() {
+        return Kembali;
+    }
+
 }

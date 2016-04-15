@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         Dosen d1= new Dosen("Kurniawan Nur R",12345678);
         Dosen d2= new Dosen("Nungki Selviandro",23456789);
-        d1.setStatus("Login");
-        d2.setStatus("Login");
+        //d1.setStatus("Login");
+        //d2.setStatus("Login");
         d1.createKelas("IF-38-01");
         d2.createKelas("IF-38-02");
         d2.createKelas("IF-38-03");

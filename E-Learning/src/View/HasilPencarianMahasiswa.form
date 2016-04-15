@@ -28,7 +28,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="Kembali" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -52,7 +52,7 @@
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="116" max="-2" attributes="0"/>
               <EmptySpace pref="30" max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="Kembali" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -64,7 +64,7 @@
         <Property name="text" type="java.lang.String" value="Hasil Pencarian Mahasiswa"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="Kembali">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
@@ -76,7 +76,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="txthasilcarimhs">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>

@@ -24,43 +24,65 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtTambahMhs" pref="190" max="32767" attributes="0"/>
-                          <Component id="btnSubmit" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNipDosen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtTambahMhs1" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Component id="txtTambahMhs" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Component id="txtNipDosen" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="Kembali" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace pref="91" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="txtNipDosen" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtTambahMhs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTambahMhs1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTambahMhs" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSubmit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Kembali" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtNipDosen" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="76" max="32767" attributes="0"/>
+              <EmptySpace pref="54" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -76,12 +98,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NIM Mahasiswa"/>
+        <Property name="text" type="java.lang.String" value="NIM"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NIP Dosen yang menginput"/>
+        <Property name="text" type="java.lang.String" value="NIP Dosen"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTambahMhs">
@@ -90,10 +112,28 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNipDosen">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNipDosenActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSubmit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kelas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTambahMhs1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTambahMhs1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Kembali">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
     </Component>
   </SubComponents>

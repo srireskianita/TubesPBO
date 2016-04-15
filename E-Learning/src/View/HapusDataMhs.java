@@ -5,16 +5,19 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
- * @author Widodo
+ * @author LENOVO X230
  */
-public class CariDataTugas extends javax.swing.JFrame {
+public class HapusDataMhs extends javax.swing.JFrame {
 
     /**
-     * Creates new form CariDataTugas
+     * Creates new form HapusDataMhs
      */
-    public CariDataTugas() {
+    public HapusDataMhs() {
         initComponents();
     }
 
@@ -27,71 +30,81 @@ public class CariDataTugas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        kembali = new javax.swing.JButton();
+        txtNim = new javax.swing.JTextField();
+        Hapus = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtKodeTugas = new javax.swing.JTextField();
-        btnCariTugas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        kembali.setText("Kembali");
+
+        txtNim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNimActionPerformed(evt);
+            }
+        });
+
+        Hapus.setText("Hapus");
+        Hapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HapusActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Cari Data Tugas");
+        jLabel1.setText("Hapus Data Mahasiswa");
 
-        jLabel2.setText("Kode Tugas");
-
-        txtKodeTugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKodeTugasActionPerformed(evt);
-            }
-        });
-
-        btnCariTugas.setText("Cari");
-        btnCariTugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCariTugasActionPerformed(evt);
-            }
-        });
+        jLabel2.setText("NIM");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
                         .addComponent(jLabel2)
-                        .addGap(70, 70, 70)
+                        .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCariTugas)
-                            .addComponent(txtKodeTugas, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(54, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Hapus)
+                                .addGap(31, 31, 31)
+                                .addComponent(kembali))
+                            .addComponent(txtNim, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
+                .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtKodeTugas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addComponent(btnCariTugas)
-                .addContainerGap(76, Short.MAX_VALUE))
+                    .addComponent(txtNim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Hapus)
+                    .addComponent(kembali))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtKodeTugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKodeTugasActionPerformed
+    private void txtNimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKodeTugasActionPerformed
+    }//GEN-LAST:event_txtNimActionPerformed
 
-    private void btnCariTugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariTugasActionPerformed
-        //new HasilPencarianTugas().setVisible(true);
-    }//GEN-LAST:event_btnCariTugasActionPerformed
+    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HapusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,29 +123,42 @@ public class CariDataTugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CariDataTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HapusDataMhs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CariDataTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HapusDataMhs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CariDataTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HapusDataMhs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CariDataTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HapusDataMhs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CariDataTugas().setVisible(true);
+                new HapusDataMhs().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCariTugas;
+    private javax.swing.JButton Hapus;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField txtKodeTugas;
+    private javax.swing.JButton kembali;
+    private javax.swing.JTextField txtNim;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getHapus() {
+        return Hapus;
+    }
+
+    public JButton getKembali() {
+        return kembali;
+    }
+
+    public JTextField getTxtNim() {
+        return txtNim;
+    }
+
 }

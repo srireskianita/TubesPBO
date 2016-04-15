@@ -5,16 +5,20 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Widodo
  */
-public class HasilPencarianMatkuliah extends javax.swing.JFrame {
+public class HasilPencarianMatakuliah extends javax.swing.JFrame {
 
     /**
      * Creates new form HasilPencarianMatkuliah
      */
-    public HasilPencarianMatkuliah() {
+    public HasilPencarianMatakuliah() {
         initComponents();
     }
 
@@ -81,7 +85,7 @@ public class HasilPencarianMatkuliah extends javax.swing.JFrame {
                             .addComponent(jLabel9)
                             .addComponent(jLabel6)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(343, Short.MAX_VALUE))
+                        .addContainerGap(367, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -96,7 +100,7 @@ public class HasilPencarianMatkuliah extends javax.swing.JFrame {
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnKembali)
-                        .addGap(30, 30, 30))))
+                        .addGap(25, 25, 25))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,21 +114,20 @@ public class HasilPencarianMatkuliah extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addGap(3, 3, 3)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnKembali)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnKembali)
+                .addContainerGap())
         );
 
         pack();
@@ -147,21 +150,23 @@ public class HasilPencarianMatkuliah extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HasilPencarianMatkuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HasilPencarianMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HasilPencarianMatkuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HasilPencarianMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HasilPencarianMatkuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HasilPencarianMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HasilPencarianMatkuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HasilPencarianMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HasilPencarianMatkuliah().setVisible(true);
+                new HasilPencarianMatakuliah().setVisible(true);
             }
         });
     }
@@ -181,4 +186,25 @@ public class HasilPencarianMatkuliah extends javax.swing.JFrame {
     private javax.swing.JTextField txtKelas;
     private javax.swing.JTextArea txtMatakuliah;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnKembali() {
+        return btnKembali;
+    }
+
+    public JTextArea getTxtDaftarMhs() {
+        return txtDaftarMhs;
+    }
+
+    public JTextArea getTxtDaftarTugas() {
+        return txtDaftarTugas;
+    }
+
+    public JTextField getTxtKelas() {
+        return txtKelas;
+    }
+
+    public JTextArea getTxtMatakuliah() {
+        return txtMatakuliah;
+    }
+
 }

@@ -12,11 +12,25 @@ package model;
 import java.util.Scanner;
 import java.io.*;
 public class Aplikasi {
-    private Dosen[] daftarDosen = new Dosen[50];
-    private Mahasiswa[] daftarMahasiswa = new Mahasiswa[100];
-    private Matakuliah[] daftarMatakuliah = new Matakuliah[50];
+    private Dosen[] daftarDosen;
+    private Mahasiswa[] daftarMahasiswa;
+    private Matakuliah[] daftarMatakuliah;
     int nd = 0, nmhs = 0;
     int nmatkul = 0;
+
+    fileIO fio;
+    
+    public Aplikasi() {
+        fio = new fileIO();
+        daftarDosen = fio.getDosen();
+        daftarMahasiswa = fio.getMhs();
+        daftarMatakuliah = fio.getMatkul();
+        
+        
+        
+    }
+    
+    
     
     public void addDosen(Dosen d){
         if (nd<50) {

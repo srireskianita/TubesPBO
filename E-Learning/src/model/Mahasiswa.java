@@ -17,9 +17,10 @@ public class Mahasiswa extends Orang{
 		this.semester=semester;
 	}
 	
-	public Mahasiswa(String status){
-		super(status);
-	}
+        
+//	public Mahasiswa(String status){
+//		super(status);
+//	}
 	public Mahasiswa(String nama, long nim){
 		super(nama,nim);
 	}

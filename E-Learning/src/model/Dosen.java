@@ -22,9 +22,9 @@ public class Dosen extends Orang{
     public Kelas getKelas(int index){
         return daftarkelas[index];
     }
-    public Dosen(String status){
-		super(status);
-    }
+//    public Dosen(String status){
+//		super(status);
+//    }
     public void removeKelas(int index){
 	if (daftarkelas[index] != null)
 	for (int i=index+1 ; i<jumKelas;i++ ){

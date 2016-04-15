@@ -5,6 +5,9 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Widodo
@@ -34,16 +37,16 @@ public class DeleteTugas extends javax.swing.JFrame {
         txtKodeKelas = new javax.swing.JTextField();
         txtKodeMatkul = new javax.swing.JTextField();
         txtKodeTugas = new javax.swing.JTextField();
-        btnTugas = new javax.swing.JButton();
+        btnHapus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Delete Tugas");
+        jLabel1.setText("Hapus Tugas");
 
         jLabel2.setText("Kode Kelas");
 
-        jLabel3.setText("Kode Matkuliah");
+        jLabel3.setText("Kode Matakuliah");
 
         jLabel4.setText("Kode Tugas");
 
@@ -53,37 +56,38 @@ public class DeleteTugas extends javax.swing.JFrame {
             }
         });
 
-        btnTugas.setText("Delete");
+        btnHapus.setText("Hapus");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4))
-                        .addGap(60, 60, 60)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnTugas)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtKodeKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                .addComponent(txtKodeMatkul)
-                                .addComponent(txtKodeTugas)))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                            .addComponent(txtKodeMatkul, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKodeKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKodeTugas, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnHapus))
+                        .addGap(51, 51, 51))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtKodeKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -94,9 +98,9 @@ public class DeleteTugas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtKodeTugas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(btnTugas)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnHapus)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
@@ -145,7 +149,7 @@ public class DeleteTugas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnTugas;
+    private javax.swing.JButton btnHapus;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -154,4 +158,21 @@ public class DeleteTugas extends javax.swing.JFrame {
     private javax.swing.JTextField txtKodeMatkul;
     private javax.swing.JTextField txtKodeTugas;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnHapus() {
+        return btnHapus;
+    }
+
+    public JTextField getTxtKodeKelas() {
+        return txtKodeKelas;
+    }
+
+    public JTextField getTxtKodeMatkul() {
+        return txtKodeMatkul;
+    }
+
+    public JTextField getTxtKodeTugas() {
+        return txtKodeTugas;
+    }
+
 }
