@@ -30,14 +30,13 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         txtTambahMhs = new javax.swing.JTextField();
         txtNipDosen = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        txtTambahMhs1 = new javax.swing.JTextField();
         Kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,8 +45,6 @@ public class TambahMahasiswa extends javax.swing.JFrame {
         jLabel1.setText("Tambahkan Mahasiswa di Kelas");
 
         jLabel2.setText("NIM");
-
-        jLabel3.setText("NIP Dosen");
 
         txtTambahMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,12 +62,6 @@ public class TambahMahasiswa extends javax.swing.JFrame {
 
         jLabel4.setText("Kelas");
 
-        txtTambahMhs1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTambahMhs1ActionPerformed(evt);
-            }
-        });
-
         Kembali.setText("Kembali");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -83,11 +74,9 @@ public class TambahMahasiswa extends javax.swing.JFrame {
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGap(33, 33, 33)
+                            .addComponent(jLabel4))
+                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTambahMhs1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
@@ -104,25 +93,19 @@ public class TambahMahasiswa extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jLabel1)
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(46, 46, 46))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2)))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtNipDosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtTambahMhs1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                    .addComponent(jLabel2)
+                    .addComponent(txtTambahMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSubmit)
                     .addComponent(Kembali))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,10 +118,6 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     private void txtNipDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNipDosenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNipDosenActionPerformed
-
-    private void txtTambahMhs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTambahMhs1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTambahMhs1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,11 +160,10 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JTextField txtNipDosen;
     private javax.swing.JTextField txtTambahMhs;
-    private javax.swing.JTextField txtTambahMhs1;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBtnSubmit() {
@@ -200,9 +178,7 @@ public class TambahMahasiswa extends javax.swing.JFrame {
         return txtTambahMhs;
     }
 
-    public JTextField getTxtTambahMhs1() {
-        return txtTambahMhs1;
-    }
+
 
     public JButton getKembali() {
         return Kembali;

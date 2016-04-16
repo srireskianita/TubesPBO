@@ -5,14 +5,16 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author buddisantiko
  */
-public class Dosen extends Orang{
+public class Dosen extends Orang implements Serializable{
     
     private Kelas[] daftarkelas = new Kelas[10];	
-    private int jumKelas=0;
+    private int jumKelas;
     private String KodeDosen;
 	
     
@@ -25,6 +27,11 @@ public class Dosen extends Orang{
 //    public Dosen(String status){
 //		super(status);
 //    }
+
+    public int getJumKelas() {
+        return jumKelas;
+    }
+    
     public void removeKelas(int index){
 	if (daftarkelas[index] != null)
 	for (int i=index+1 ; i<jumKelas;i++ ){
@@ -32,10 +39,10 @@ public class Dosen extends Orang{
             }
         jumKelas--;
 	}
-    public void createKelas(String namaKelas){
+    public void createKelas(String namaKelas,int maxKelas){
         
          if(jumKelas< daftarkelas.length){
-            daftarkelas[jumKelas] = new Kelas(namaKelas);
+            daftarkelas[jumKelas] = new Kelas(namaKelas,maxKelas);
             jumKelas++;
         }
     }	

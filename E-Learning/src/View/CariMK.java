@@ -34,7 +34,7 @@ public class CariMK extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtNip = new javax.swing.JTextField();
+        txtKelas = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtkodeMK = new javax.swing.JTextField();
         cari = new javax.swing.JButton();
@@ -51,13 +51,13 @@ public class CariMK extends javax.swing.JFrame {
 
         jLabel2.setText("Kode Matakuliah");
 
-        txtNip.addActionListener(new java.awt.event.ActionListener() {
+        txtKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNipActionPerformed(evt);
+                txtKelasActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("NIP Dosen");
+        jLabel5.setText("Kelas");
 
         txtkodeMK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +89,7 @@ public class CariMK extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtkodeMK, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNip, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(cari)
                                 .addGap(57, 57, 57)
@@ -108,7 +108,7 @@ public class CariMK extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtNip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cari)
@@ -119,9 +119,9 @@ public class CariMK extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNipActionPerformed
+    private void txtKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKelasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNipActionPerformed
+    }//GEN-LAST:event_txtKelasActionPerformed
 
     private void txtkodeMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkodeMKActionPerformed
         // TODO add your handling code here:
@@ -175,7 +175,7 @@ public class CariMK extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtNip;
+    private javax.swing.JTextField txtKelas;
     private javax.swing.JTextField txtkodeMK;
     // End of variables declaration//GEN-END:variables
 
@@ -187,9 +187,11 @@ public class CariMK extends javax.swing.JFrame {
         return cari;
     }
 
-    public JTextField getTxtNip() {
-        return txtNip;
+    public JTextField getTxtKelas() {
+        return txtKelas;
     }
+
+   
 
     public JTextField getTxtkodeMK() {
         return txtkodeMK;

@@ -6,6 +6,7 @@
 package View;
 
 import javax.swing.JButton;
+import javax.swing.JToggleButton;
 
 /**
  *
@@ -34,11 +35,12 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         cariMhs = new javax.swing.JButton();
         HapusMhs = new javax.swing.JButton();
         kembali = new javax.swing.JButton();
+        pilihKelas = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Menu Mahasiswa");
+        jLabel1.setText("Halaman Mahasiswa");
 
         InputMhs.setText("Input Data Mahasiswa");
         InputMhs.addActionListener(new java.awt.event.ActionListener() {
@@ -63,27 +65,34 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         kembali.setText("Kembali");
 
+        pilihKelas.setText("Pilih Kelas");
+        pilihKelas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pilihKelasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(132, 132, 132)
+                .addComponent(jLabel1)
+                .addGap(84, 84, 84))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(jLabel1))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(kembali, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(HapusMhs)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(InputMhs)
-                                .addGap(37, 37, 37)
-                                .addComponent(cariMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kembali, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cariMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(InputMhs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(HapusMhs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(59, 59, 59)
+                        .addComponent(pilihKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)))
                 .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
@@ -94,10 +103,12 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(InputMhs)
-                    .addComponent(cariMhs))
-                .addGap(33, 33, 33)
+                    .addComponent(pilihKelas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cariMhs)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(HapusMhs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(kembali)
                 .addGap(28, 28, 28))
         );
@@ -116,6 +127,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private void HapusMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusMhsActionPerformed
        
     }//GEN-LAST:event_HapusMhsActionPerformed
+
+    private void pilihKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilihKelasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pilihKelasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,6 +174,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private javax.swing.JButton cariMhs;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton kembali;
+    private javax.swing.JToggleButton pilihKelas;
     // End of variables declaration//GEN-END:variables
 
     public JButton getCariMhs() {
@@ -175,6 +191,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
     public JButton getKembali() {
         return kembali;
+    }
+
+    public JToggleButton getPilihKelas() {
+        return pilihKelas;
     }
 
     

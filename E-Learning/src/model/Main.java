@@ -15,10 +15,10 @@ public class Main {
         Dosen d2= new Dosen("Nungki Selviandro",23456789);
         //d1.setStatus("Login");
         //d2.setStatus("Login");
-        d1.createKelas("IF-38-01");
-        d2.createKelas("IF-38-02");
-        d2.createKelas("IF-38-03");
-        d1.createKelas("IF-38-04");
+        d1.createKelas("IF-38-01",40);
+        d2.createKelas("IF-38-02",40);
+        d2.createKelas("IF-38-03",40);
+        d1.createKelas("IF-38-04",40);
         Mahasiswa m1= new Mahasiswa("Widodo Setyo",1301140194);
         Mahasiswa m2= new Mahasiswa("Sri Reski Anita",1301140204);
         Mahasiswa m3= new Mahasiswa("Budi Santiko",1301144404);
@@ -37,14 +37,14 @@ public class Main {
         Matakuliah matkul2=new Matakuliah("CSG2J3","Rekayasa Perangkat Lunak");
         d1.getKelas(0).setMatakuliah(matkul1);
         d1.getKelas(1).setMatakuliah(matkul1);
-        d1.getKelas(0).createTugas("TGS-PBO-01");
-        d1.getKelas(1).createTugas("TGS-PBO-01");
-        d1.getKelas(0).createTugas("TGS-PBO-02");
+        d1.getKelas(0).createTugas("TGS-PBO-01","");
+        d1.getKelas(1).createTugas("TGS-PBO-01","");
+        d1.getKelas(0).createTugas("TGS-PBO-02","");
         d2.getKelas(0).setMatakuliah(matkul2);
         d2.getKelas(1).setMatakuliah(matkul2);
-        d2.getKelas(0).createTugas("TGS-RPL-04");
-        d2.getKelas(1).createTugas("TGS-RPL-04");
-        d2.getKelas(0).createTugas("TGS-RPL-05");
+        d2.getKelas(0).createTugas("TGS-RPL-04","");
+        d2.getKelas(1).createTugas("TGS-RPL-04","");
+        d2.getKelas(0).createTugas("TGS-RPL-05","");
         
         //sebelum remove
         d1.display();

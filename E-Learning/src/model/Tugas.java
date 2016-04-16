@@ -13,7 +13,7 @@ public class Tugas{
 	private String kodeTgs;
 	private String desk;
 
-    public Tugas(String kodeTgs){
+    public Tugas(String kodeTgs,String desk){
         this.kodeTgs=kodeTgs;
     }
 		

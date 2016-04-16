@@ -37,6 +37,7 @@ public class ControllerViewMahasiswa implements ActionListener{
     CariMahasiswa cm;
     HasilPencarianMahasiswa hpm;
     HapusDataMhs hdm;
+    PilihKelas pk;
     //menu lain
     MenuLain lain;
     InputMatkul imk;
@@ -66,6 +67,7 @@ public class ControllerViewMahasiswa implements ActionListener{
         cm = new CariMahasiswa();
         hdm=new HapusDataMhs();
         hpm= new HasilPencarianMahasiswa();
+        pk= new PilihKelas();
         //Menu Lain
         lain= new MenuLain();
         imk= new InputMatkul();
@@ -114,6 +116,8 @@ public class ControllerViewMahasiswa implements ActionListener{
         mm.getHapusMhs().addActionListener(this);
         hdm.getKembali().addActionListener(this);
         hdm.getHapus().addActionListener(this);
+        mm.getPilihKelas().addActionListener(this);
+        
         
         //menu lain
         mu.getMenuLain().addActionListener(this);
@@ -267,7 +271,6 @@ public class ControllerViewMahasiswa implements ActionListener{
            
             hpm.getTxthasilcarimhs().append(app.getMahasiswabyNim(nim).toString()+"\n");
             
-            
         }
         if(o.equals(hpm.getKembali())){
             cm.setVisible(true);
@@ -292,6 +295,14 @@ public class ControllerViewMahasiswa implements ActionListener{
         if (o.equals(mm.getKembali())){
             mu.setVisible(true);
             mm.dispose();
+        }
+        if (o.equals(mm.getPilihKelas())){
+            pk.setVisible(true);
+            mm.dispose();
+        }
+        if (o.equals(pk.getTambah())){
+            String kelas= pk.getTxtKelas().getText();
+           
         }
         
         //Menu Lain
@@ -323,8 +334,11 @@ public class ControllerViewMahasiswa implements ActionListener{
             lain.dispose();
         }
         if (o.equals(cmk.getCari())){
+            String kodeMk= cmk.getTxtkodeMK().getText();
+            
             hpmk.setVisible(true);
             cmk.dispose();
+            hpmk.getTxtMatakuliah().append(app.getMatkul(kodeMk).toString()+"\n");
         }
         if(o.equals(hpmk.getBtnKembali())){
             cmk.setVisible(true);

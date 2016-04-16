@@ -29,18 +29,32 @@ public class MenuLain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnInputDosen = new javax.swing.JButton();
+        btnCariDosen = new javax.swing.JButton();
+        btnHapusDosen = new javax.swing.JButton();
         cariMK = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         InputMK = new javax.swing.JButton();
         hapusMK = new javax.swing.JButton();
         Kembali = new javax.swing.JButton();
 
+        btnInputDosen.setText("Input Data Dosen");
+
+        btnCariDosen.setText("Cari Data Dosen");
+        btnCariDosen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCariDosenActionPerformed(evt);
+            }
+        });
+
+        btnHapusDosen.setText("Hapus Data Dosen");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         cariMK.setText("Cari Matakuliah");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Menu Lain");
+        jLabel1.setText("Menu Data Matakuliah");
 
         InputMK.setText(" Input Matakuliah");
         InputMK.addActionListener(new java.awt.event.ActionListener() {
@@ -58,37 +72,40 @@ public class MenuLain extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(142, 142, 142)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(InputMK, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(cariMK, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Kembali))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(hapusMK, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(InputMK, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cariMK, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)))
-                .addGap(35, 35, 35))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Kembali)
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(118, 118, 118))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(hapusMK, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(142, 142, 142))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(164, 254, Short.MAX_VALUE)
+                .addComponent(Kembali)
+                .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(40, 40, 40)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(InputMK)
                     .addComponent(cariMK))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(38, 38, 38)
                 .addComponent(hapusMK)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(Kembali)
-                .addGap(45, 45, 45))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -97,6 +114,10 @@ public class MenuLain extends javax.swing.JFrame {
     private void InputMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputMKActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InputMKActionPerformed
+
+    private void btnCariDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariDosenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCariDosenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,6 +157,9 @@ public class MenuLain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton InputMK;
     private javax.swing.JButton Kembali;
+    private javax.swing.JButton btnCariDosen;
+    private javax.swing.JButton btnHapusDosen;
+    private javax.swing.JButton btnInputDosen;
     private javax.swing.JButton cariMK;
     private javax.swing.JButton hapusMK;
     private javax.swing.JLabel jLabel1;

@@ -26,41 +26,40 @@ public class Aplikasi {
         daftarMahasiswa = fio.getMhs();
         daftarMatakuliah = fio.getMatkul();
         
-        
-        
+
     }
     
-    
-    
     public void addDosen(Dosen d){
-        if (nd<50) {
+        if (nd<daftarDosen.length) {
          daftarDosen[nd] = d;
          nd++;
         }
     }
     
     public void addMahasiswa(Mahasiswa m) {
-        if (nmhs<100) {
+        if (nmhs<daftarMahasiswa.length) {
          daftarMahasiswa[nmhs] = m;
          nmhs++;
         }
     }
     
     public void addMatakuliah(Matakuliah t) {
-        if (nmatkul<50) {
+        if (nmatkul<daftarMahasiswa.length) {
          daftarMatakuliah[nmatkul] = t;
          nmatkul++;
         }
     }
         
     public Mahasiswa getMahasiswabyNim(long IdMhs) { 
+        Mahasiswa m=null;
         int a;
-        for (a=0; a<100; a++) {
+        for (a=0; a<daftarMahasiswa.length; a++) {
             if (daftarMahasiswa[a].getId() == IdMhs) {
+                m=daftarMahasiswa[a];
                 break;
             }   
         }        
-        return daftarMahasiswa[a];
+        return m;
     }
     
     public Mahasiswa getMahasiswabyIndex(int index) {
@@ -69,15 +68,15 @@ public class Aplikasi {
         
     public void deleteMahasiswa(long IdMhs) {
         int a = 0;
-        for (a=0; a<100; a++) {
+        for (a=0; a<daftarMahasiswa.length; a++) {
             if ( daftarMahasiswa[a].getId() == IdMhs) {
                 break;
             }
         }
         daftarMahasiswa[a] = null;
-        for (int b=0;b<100;b++) {
+        for (int b=0;b<daftarMahasiswa.length;b++) {
             if (daftarMahasiswa[b] == null) {
-                while(b<(100-b)){
+                while(b<(daftarMahasiswa.length-b)){
                     daftarMahasiswa[b] = daftarMahasiswa[b+1];
                     b++;
                 }
@@ -86,13 +85,15 @@ public class Aplikasi {
     }
     
     public Dosen getDosen(long IdDosen) { 
-        int a = 0;
-        for (a=0; a<50; a++) {
-            if ( daftarDosen[a].getId() == IdDosen) {
+       Dosen d=null;
+        int a;
+        for (a=0; a<daftarDosen.length; a++) {
+            if (daftarDosen[a].getId() == IdDosen) {
+                d=daftarDosen[a];
                 break;
-            }
-        }
-        return daftarDosen[a];
+            }   
+        }        
+        return d;
     }
     
     public Dosen getDosenbyIndex(int index) {
@@ -101,15 +102,15 @@ public class Aplikasi {
     
     public void deleteDosen(long IdDosen) {
         int a = 0;
-        for (a=0; a<50; a++) {
+        for (a=0; a<daftarDosen.length; a++) {
             if ( daftarDosen[a].getId() == IdDosen) {
                 break;
             }
         }
         daftarDosen[a] = null;
-        for (int b=0;b<50;b++) {
+        for (int b=0;b<daftarDosen.length;b++) {
             if (daftarDosen[b] == null) {
-                while(b<(50-b)){
+                while(b<(daftarDosen.length-b)){
                     daftarDosen[b] = daftarDosen[b+1];
                     b++;
                 }
@@ -119,7 +120,7 @@ public class Aplikasi {
     
     public Matakuliah getMatkul(String KodeMK) { 
         int a = 0;
-        for (a=0; a<50; a++) {
+        for (a=0; a<daftarMatakuliah.length; a++) {
             if ( daftarMatakuliah[a].getKodeMk() == KodeMK) {
                 break;
             }
@@ -133,15 +134,15 @@ public class Aplikasi {
     
     public void deleteMatkul(String KodeMK) {
         int a = 0;
-        for (a=0; a<50; a++) {
+        for (a=0; a<daftarMatakuliah.length; a++) {
             if ( daftarMatakuliah[a].getKodeMk() == KodeMK) {
                 break;
             }
         }
         daftarMatakuliah[a] = null;
-        for (int b=0;b<50;b++) {
+        for (int b=0;b<daftarMatakuliah.length;b++) {
             if (daftarMatakuliah[b] == null) {
-                while(b<(5-b)){
+                while(b<(daftarMatakuliah.length-b)){
                     daftarMatakuliah[b] = daftarMatakuliah[b+1];
                     b++;
                 }
@@ -299,7 +300,9 @@ public class Aplikasi {
         for(int a=0;a<n;a++){
             System.out.println("Tugas : ");
             tugas= input.nextLine();
-           getDosen(IdDosen).getKelas(nd).createTugas(tugas);
+            System.out.println("Deskripsi : ");
+            String desk= input.nextLine();
+           getDosen(IdDosen).getKelas(nd).createTugas(tugas,desk);
         }
         
     }    
