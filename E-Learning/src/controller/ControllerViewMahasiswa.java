@@ -253,9 +253,7 @@ public class ControllerViewMahasiswa implements ActionListener{
             mu.setVisible(true);
             md.dispose();
         }
-        
-        
-        
+
         else if (o.equals(md.getCreateKelas())){
             ck.setVisible(true);
             md.dispose();
@@ -407,8 +405,14 @@ public class ControllerViewMahasiswa implements ActionListener{
             dmk.dispose();
         }
         
-        else if (o.equals(mu.getKeluar())){
-            JOptionPane.showMessageDialog(null, "Terima kasih");
+        else if (o.equals(mu.getKeluar())){     
+            int selectedOption = JOptionPane.showConfirmDialog(null, 
+                                  "Apakah Anda Yakin Ingin Keluar?", 
+                                  "Pilih", 
+                                  JOptionPane.YES_NO_OPTION); 
+             if (selectedOption == JOptionPane.YES_OPTION) {
+                         mu.dispose();
+               }
             
         }    
     }
