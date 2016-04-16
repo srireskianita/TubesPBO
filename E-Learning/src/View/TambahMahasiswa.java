@@ -211,6 +211,5 @@ public class TambahMahasiswa extends javax.swing.JFrame {
             
         }
 
-        
     }
 }

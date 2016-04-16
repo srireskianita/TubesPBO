@@ -357,8 +357,14 @@ public class ControllerViewMahasiswa implements ActionListener{
             mm.dispose();
         }
         else if (o.equals(pk.getTambah())){
-            String kelas= pk.getTxtKelas().getText();
-           JOptionPane.showMessageDialog(null, "Berhasil Ditambah");
+            String kelas= tm.getTxtKelas().getSelectedItem().toString();
+            long nim=Long.parseLong(tm.getTxtNim().getText());
+            long nip=Long.parseLong(tm.getTxtNip().getText());
+            Mahasiswa m= app.getMahasiswabyNim(nim);
+             
+            app.getDosen(nip).getKelasbyKodeKelas(kelas).addMahasiswa(m);
+            
+            JOptionPane.showMessageDialog(null,"Mahasiswa berhasil ditambah");
         }
         else if (o.equals(pk.getKembali())){
             mm.setVisible(true);
