@@ -32,10 +32,11 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         InputMhs = new javax.swing.JButton();
-        cariMhs = new javax.swing.JButton();
         HapusMhs = new javax.swing.JButton();
         kembali = new javax.swing.JButton();
         pilihKelas = new javax.swing.JToggleButton();
+        LihatInfoKelas = new javax.swing.JButton();
+        cariMhs = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,13 +47,6 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         InputMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InputMhsActionPerformed(evt);
-            }
-        });
-
-        cariMhs.setText("Cari Data Mahasiswa");
-        cariMhs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cariMhsActionPerformed(evt);
             }
         });
 
@@ -72,6 +66,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             }
         });
 
+        LihatInfoKelas.setText("Lihat Info Kelas");
+
+        cariMhs.setText("Cari Data Mahasiswa");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,14 +83,16 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(kembali, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cariMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(InputMhs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(HapusMhs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(59, 59, 59)
-                        .addComponent(pilihKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pilihKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LihatInfoKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))))
                 .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
@@ -105,7 +105,9 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                     .addComponent(InputMhs)
                     .addComponent(pilihKelas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cariMhs)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LihatInfoKelas)
+                    .addComponent(cariMhs))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(HapusMhs)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
@@ -119,10 +121,6 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     private void InputMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputMhsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InputMhsActionPerformed
-
-    private void cariMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariMhsActionPerformed
-        new CariMahasiswa().setVisible(true);
-    }//GEN-LAST:event_cariMhsActionPerformed
 
     private void HapusMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusMhsActionPerformed
        
@@ -171,6 +169,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton HapusMhs;
     private javax.swing.JButton InputMhs;
+    private javax.swing.JButton LihatInfoKelas;
     private javax.swing.JButton cariMhs;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton kembali;
@@ -195,6 +194,10 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
     public JToggleButton getPilihKelas() {
         return pilihKelas;
+    }
+
+    public JButton getLihatInfoKelas() {
+        return LihatInfoKelas;
     }
 
     

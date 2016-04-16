@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Dosen extends Orang implements Serializable{
     
-    private Kelas[] daftarkelas = new Kelas[10];	
+    private Kelas[] daftarkelas;	
     private int jumKelas;
     private String KodeDosen;
 	
@@ -41,7 +41,7 @@ public class Dosen extends Orang implements Serializable{
 	}
     public void createKelas(String namaKelas,int maxKelas){
         
-         if(jumKelas< daftarkelas.length){
+         if(jumKelas< this.jumKelas){
             daftarkelas[jumKelas] = new Kelas(namaKelas,maxKelas);
             jumKelas++;
         }
@@ -59,4 +59,26 @@ public class Dosen extends Orang implements Serializable{
              
              
          }
+
+    @Override
+    public String toString() {
+        String nama = "nama : "+getNama()+"\n";
+        String nip = "nip : "+super.getId()+"\n";
+        String dKelas = "";
+        for (int i = 0; i < this.jumKelas; i++) {
+            dKelas += daftarkelas[i].getNamakelas()+"\ndaftar mahasiswa";
+            for (int j = 0; j < daftarkelas[i].getJmlMahasiswa(); j++) {
+                dKelas += daftarkelas[i].getMahasiswabyIndex(j).getNama()+"\n";
+            }
+            dKelas += "tugas\n";
+            for (int j = 0; j < daftarkelas[i].getJumTugas(); j++) {
+                dKelas += daftarkelas[i].getTugas(j).getDesk()+"\n";
+                
+            }
+        }
+        return nama+nip+dKelas;
+//        return "Dosen{" + "daftarkelas=" + daftarkelas + ", jumKelas=" + jumKelas + ", KodeDosen=" + KodeDosen + '}';
+    }
+    
+    
 }

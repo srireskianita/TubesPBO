@@ -25,12 +25,13 @@ public class ControllerViewMahasiswa implements ActionListener{
     MenuDosen md;
     InputDataDosen idd;
     DeleteDosen dd;
-    DeleteTugas dt;
+    
     TambahTugas tg;
     CariDosen cd;
     HasilPencarianDosen hpd;
     TambahMahasiswa tm;
     DeleteMhs dm;
+    CreateKelas ck;
     //Menu Mhs
     MenuMahasiswa mm;
     InputDataMhs idm;
@@ -38,6 +39,7 @@ public class ControllerViewMahasiswa implements ActionListener{
     HasilPencarianMahasiswa hpm;
     HapusDataMhs hdm;
     PilihKelas pk;
+    LihatInfoKelas lik;
     //menu lain
     MenuLain lain;
     InputMatkul imk;
@@ -55,12 +57,13 @@ public class ControllerViewMahasiswa implements ActionListener{
         md = new MenuDosen();
         idd= new InputDataDosen();
         dd = new DeleteDosen();
-        dt= new DeleteTugas();
+       
         tg= new TambahTugas();
         cd= new CariDosen();
         hpd= new HasilPencarianDosen();
         tm = new TambahMahasiswa();
         dm = new DeleteMhs();
+        ck=new CreateKelas();
         //Menu Mhs
         mm = new MenuMahasiswa();
         idm = new InputDataMhs();
@@ -68,13 +71,14 @@ public class ControllerViewMahasiswa implements ActionListener{
         hdm=new HapusDataMhs();
         hpm= new HasilPencarianMahasiswa();
         pk= new PilihKelas();
+        lik= new LihatInfoKelas();
         //Menu Lain
         lain= new MenuLain();
         imk= new InputMatkul();
         cmk= new CariMK();
         dmk= new DeleteMatakuliah();
         app = new Aplikasi();
-        
+        hpmk = new HasilPencarianMatakuliah();
         
         
         mu.setVisible(true);
@@ -86,7 +90,7 @@ public class ControllerViewMahasiswa implements ActionListener{
         idd.getBtnSubmit().addActionListener(this);
         md.getBtnHapusDosen().addActionListener(this);
         dd.getHapus().addActionListener(this);
-        md.getBtnHapusTugas().addActionListener(this);
+       
         md.getBtnTambahTugas().addActionListener(this);
         tg.getSubmit().addActionListener(this);
         md.getBtnCariDosen().addActionListener(this);
@@ -101,7 +105,15 @@ public class ControllerViewMahasiswa implements ActionListener{
         cd.getKembali().addActionListener(this);
         tm.getKembali().addActionListener(this);
         dm.getKembali().addActionListener(this);
+        hpd.getKembali().addActionListener(this);
+        mm.getLihatInfoKelas().addActionListener(this);
+        lik.getCari().addActionListener(this);
+        lik.getKembali().addActionListener(this);
+        md.getCreateKelas().addActionListener(this);
+        ck.getCreate().addActionListener(this);
+        ck.getKembali().addActionListener(this);
         
+         
         //menu mhs
         mu.getMenuMhs().addActionListener(this);
         mm.getInputMhs().addActionListener(this);
@@ -110,13 +122,15 @@ public class ControllerViewMahasiswa implements ActionListener{
         idm.getKembali().addActionListener(this);
         mm.getKembali().addActionListener(this);
         mm.getCariMhs().addActionListener(this);
-        cm.getBtnCariMhs().addActionListener(this);
+        cm.getCari().addActionListener(this);
         cm.getKembali().addActionListener(this);
         hpm.getKembali().addActionListener(this);
         mm.getHapusMhs().addActionListener(this);
         hdm.getKembali().addActionListener(this);
         hdm.getHapus().addActionListener(this);
         mm.getPilihKelas().addActionListener(this);
+        pk.getTambah().addActionListener(this);
+        pk.getKembali().addActionListener(this);
         
         
         //menu lain
@@ -138,76 +152,76 @@ public class ControllerViewMahasiswa implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object o = ae.getSource();
+        
+//        if(o.equals(this.cm.getCari())){
+//            JOptionPane.showMessageDialog(null, "123");
+//        }
         if(o.equals(mu.getMenuMhs())){
             mm.setVisible(true);
             mu.dispose();
         }
        //Menu dosen
-        if (o.equals(mu.getMenuDosen())){
+        else if (o.equals(mu.getMenuDosen())){
             md.setVisible(true);
             mu.dispose();
         }
-        if (o.equals(md.getBtnInputDosen())){
+        else if (o.equals(md.getBtnInputDosen())){
             idd.setVisible(true);
             md.dispose();
         }
-        if(o.equals(idd.getBtnSubmit())){
+        else if(o.equals(idd.getBtnSubmit())){
             String nama = idd.getTxtNamaDosen().getText();
             long nip = Long.parseLong(idd.getTxtNip().getText());
             Dosen d = new Dosen(nama,nip);
             app.addDosen(d);
-       
+            System.out.println(app.getNdosen());
             JOptionPane.showMessageDialog(null, "Input Berhasil");
         }
-        if(o.equals(idd.getKembali())){
+        else if(o.equals(idd.getKembali())){
             md.setVisible(true);
             idd.dispose();
         }
-        if(o.equals(md.getBtnHapusDosen())){
+        else if(o.equals(md.getBtnHapusDosen())){
             dd.setVisible(true);
             md.dispose();
         }
-        if (o.equals(dd.getHapus())){
+        else if (o.equals(dd.getHapus())){
             long nip = Long.parseLong(idd.getTxtNip().getText());
             app.deleteDosen(nip);
             JOptionPane.showMessageDialog(null, "Data Terhapus");
         }
-        if(o.equals(dd.getKembali())){
+        else if(o.equals(dd.getKembali())){
             md.setVisible(true);
             dd.dispose();
         }
-        if (o.equals(md.getBtnHapusTugas())){
-            dt.setVisible(true);
-            md.dispose();
-        }
         
-        if (o.equals(md.getBtnTambahTugas())){
+        else if (o.equals(md.getBtnTambahTugas())){
             tg.setVisible(true);
             md.dispose();
         }
-        if(o.equals(tg.getSubmit())){
+        else if(o.equals(tg.getSubmit())){
             String Kelas = tg.getTxtKelas().getText();
             String KodeMk = tg.getTxtKodeMK().getText();
             String NamaMk = tg.getTxtNamaMK().getText();
             String KodeTugas = tg.getTxtKodeTugas().getText();
-            String Desk=tg.getTxtDesk().getText();
+            String Desk=tg.getDeskripsi().getText();
            
             JOptionPane.showMessageDialog(null, "Input berhasil");
         }
-        if(o.equals(tg.getKembali())){
-            md.setVisible(true);
-            tg.dispose();
-        }
-        if (o.equals(md.getBtnCariDosen())){
+       else if( o.equals(tg.getKembali())){
+           md.setVisible(true);
+           tg.dispose();;
+       }
+        else if (o.equals(md.getBtnCariDosen())){
             cd.setVisible(true);
             md.dispose();
         }
        
-        if(o.equals(cd.getKembali())){
+        else if(o.equals(cd.getKembali())){
             md.setVisible(true);
             cd.dispose();
         }
-        if (o.equals(cd.getBtnCariDosen())){
+        else if (o.equals(cd.getBtnCariDosen())){
             long nip= Long.parseLong(cd.getTxtNip().getText());
             
             hpd.setVisible(true);
@@ -215,150 +229,187 @@ public class ControllerViewMahasiswa implements ActionListener{
            
             hpd.getTxtHasilCariDosen().append(app.getDosen(nip).toString()+"\n");
         }
-        if(o.equals(hpd.getKembali())){
+        else if(o.equals(hpd.getKembali())){
             cd.setVisible(true);
             hpd.dispose();
         }
-        if (o.equals(md.getBtnTambahMhs())){
+        else if (o.equals(md.getBtnTambahMhs())){
             tm.setVisible(true);
             md.dispose();
         }
-        if(o.equals(tm.getKembali())){
+        else if(o.equals(tm.getKembali())){
             md.setVisible(true);
             tm.dispose();
         }
-        if(o.equals(md.getBtnHapusMhs())){
+        else if(o.equals(md.getBtnHapusMhs())){
             dm.setVisible(true);
             md.dispose();
         }
-        if(o.equals(dm.getKembali())){
+        else if(o.equals(dm.getKembali())){
             md.setVisible(true);
             dm.dispose();
         }
-        if(o.equals(md.getKembali())){
+        else if(o.equals(md.getKembali())){
             mu.setVisible(true);
             md.dispose();
         }
+        
+        
+        
+        else if (o.equals(md.getCreateKelas())){
+            ck.setVisible(true);
+            md.dispose();
+        }
+        else if (o.equals(ck.getCreate())){
+            String kelas= ck.getTxtKelas().getText();
+            long nip=Long.parseLong(ck.getTxtNip().getText());
+            app.getDosen(nip).createKelas(kelas, 20);
+           
+            JOptionPane.showMessageDialog(null, "Create Kelas Berhasil");
+        }
+        else if (o.equals(ck.getKembali())){
+            md.setVisible(true);
+            ck.dispose();
+        }
         //menu mhs
-        if(o.equals(mm.getInputMhs())){
+        else if(o.equals(mm.getInputMhs())){
             idm.setVisible(true);
             mm.dispose();
         }
-        if (o.equals(idm.getSubmit())){
+        else if (o.equals(idm.getSubmit())){
             String Nama = idm.getTxtNama().getText();
             long Nim= Long.parseLong(idm.getTxtNIM().getText());
             Mahasiswa m= new Mahasiswa(Nama, Nim);
             app.addMahasiswa(m);
+            System.out.println(app.getNmhs());
             JOptionPane.showMessageDialog(null, "Input berhasil");
         }
-        if(o.equals(idm.getKembali())){
+        else if(o.equals(idm.getKembali())){
             mm.setVisible(true);
             idm.dispose();
         }
-        if(o.equals(mm.getCariMhs())){
+        else if(o.equals(mm.getCariMhs())){
             cm.setVisible(true);
             mm.dispose();
         }
-        if(o.equals(cm.getKembali())){
+        else if(o.equals(cm.getKembali())){
             mm.setVisible(true);
             cm.dispose();     
         }
-        if(o.equals(cm.getBtnCariMhs())){
+        else if(o.equals(cm.getCari())){
             long nim= Long.parseLong(cm.getTxtCariMhs().getText());
-            
+            System.out.println(nim);
             hpm.setVisible(true);
             cm.dispose();
-           
+            System.out.println(app.getMahasiswabyNim(nim).getNama());
+            System.out.println(app.getMahasiswabyNim(nim).getId());
             hpm.getTxthasilcarimhs().append(app.getMahasiswabyNim(nim).toString()+"\n");
             
         }
-        if(o.equals(hpm.getKembali())){
+        else if(o.equals(hpm.getKembali())){
             cm.setVisible(true);
             hpm.dispose();
         }
         
         
-        if (o.equals(mm.getHapusMhs())){
+        else if (o.equals(mm.getHapusMhs())){
             hdm.setVisible(true);
             mm.dispose();
         }
-        if(o.equals(hdm.getHapus())){
+        else if(o.equals(hdm.getHapus())){
              long nim= Long.parseLong(hdm.getTxtNim().getText());
              app.deleteMahasiswa(nim);
              JOptionPane.showMessageDialog(null, "Data Terhapus");
              
         }
-        if(o.equals(hdm.getKembali())){
+        else if(o.equals(hdm.getKembali())){
             mm.setVisible(true);
             hdm.dispose();
         }
-        if (o.equals(mm.getKembali())){
+        else if (o.equals(mm.getKembali())){
             mu.setVisible(true);
             mm.dispose();
         }
-        if (o.equals(mm.getPilihKelas())){
+        else if (o.equals(mm.getPilihKelas())){
             pk.setVisible(true);
             mm.dispose();
         }
-        if (o.equals(pk.getTambah())){
+        else if (o.equals(pk.getTambah())){
             String kelas= pk.getTxtKelas().getText();
-           
+           JOptionPane.showMessageDialog(null, "Berhasil Ditambah");
+        }
+        else if (o.equals(pk.getKembali())){
+            mm.setVisible(true);
+            pk.dispose();
+        }
+        else if (o.equals(mm.getLihatInfoKelas())){
+            lik.setVisible(true);
+            mm.dispose();
+        }
+        else if (o.equals(lik.getCari())){
+            String kelas=lik.getTxtKelas().getText();
+            
+        }
+        else if( o.equals(lik.getKembali())){
+            mm.setVisible(true);
+            lik.dispose();
         }
         
         //Menu Lain
-        if(o.equals(mu.getMenuLain())){
+        else if(o.equals(mu.getMenuLain())){
             lain.setVisible(true);
             mu.dispose();
         }
-        if(o.equals(lain.getKembali())){
+        else if(o.equals(lain.getKembali())){
             mu.setVisible(true);
             lain.dispose();
         }
-        if (o.equals(lain.getInputMK())){
+        else if (o.equals(lain.getInputMK())){
             imk.setVisible(true);
             lain.dispose();
         }
-        if (o.equals(imk.getSubmit())){
+        else if (o.equals(imk.getSubmit())){
             String KodeMk = tg.getTxtKodeMK().getText();
             String NamaMk = tg.getTxtNamaMK().getText();
             Matakuliah mk= new Matakuliah(KodeMk,NamaMk);
             app.addMatakuliah(mk);
             JOptionPane.showMessageDialog(null, "Input berhasil");
         }
-        if (o.equals(imk.getKembali())){
+        else if (o.equals(imk.getKembali())){
             lain.setVisible(true);
             imk.dispose();
         }
-        if (o.equals(lain.getCariMK())){
+        else if (o.equals(lain.getCariMK())){
             cmk.setVisible(true);
             lain.dispose();
         }
-        if (o.equals(cmk.getCari())){
+        else if (o.equals(cmk.getCari())){
             String kodeMk= cmk.getTxtkodeMK().getText();
             
             hpmk.setVisible(true);
             cmk.dispose();
             hpmk.getTxtMatakuliah().append(app.getMatkul(kodeMk).toString()+"\n");
         }
-        if(o.equals(hpmk.getBtnKembali())){
+        else if(o.equals(hpmk.getBtnKembali())){
             cmk.setVisible(true);
             hpmk.dispose();
         }
-        if(o.equals(cmk.getKembali())){
+        else if(o.equals(cmk.getKembali())){
             lain.setVisible(true);
             cmk.dispose();
         }
-        if (o.equals(lain.getHapusMK())){
+        else if (o.equals(lain.getHapusMK())){
             dmk.setVisible(true);
             lain.dispose();
         }
-        if(o.equals(dmk.getKembali())){
+        else if(o.equals(dmk.getKembali())){
             lain.setVisible(true);
             dmk.dispose();
         }
         
-        if (o.equals(mu.getKeluar())){
+        else if (o.equals(mu.getKeluar())){
             JOptionPane.showMessageDialog(null, "Terima kasih");
+            
         }    
     }
     

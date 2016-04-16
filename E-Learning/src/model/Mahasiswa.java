@@ -29,6 +29,11 @@ public class Mahasiswa extends Orang{
              System.out.println("Nama Mahasiswa: "+super.getNama());
              System.out.println("NIM Mahasiswa: "+super.getId());
          }
+
+    @Override
+    public String toString() {
+        return "Nama : " + super.getNama();
+    }
      
      
 	

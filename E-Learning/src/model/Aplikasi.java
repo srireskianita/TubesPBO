@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author LENOVO X230
+ * @author Sri Reski Anita
  */
 import java.util.Scanner;
 import java.io.*;
@@ -27,6 +27,30 @@ public class Aplikasi {
         daftarMatakuliah = fio.getMatkul();
         
 
+    }
+
+    public Mahasiswa[] getDaftarMahasiswa() {
+        return daftarMahasiswa;
+    }
+
+    public Matakuliah[] getDaftarMatakuliah() {
+        return daftarMatakuliah;
+    }
+
+    public Dosen[] getDaftarDosen() {
+        return daftarDosen;
+    }
+
+    public int getNdosen() {
+        return nd;
+    }
+
+    public int getNmhs() {
+        return nmhs;
+    }
+
+    public int getNmatkul() {
+        return nmatkul;
     }
     
     public void addDosen(Dosen d){
@@ -87,13 +111,12 @@ public class Aplikasi {
     public Dosen getDosen(long IdDosen) { 
        Dosen d=null;
         int a;
-        for (a=0; a<daftarDosen.length; a++) {
+        for (a=0; a< this.nd; a++) {
             if (daftarDosen[a].getId() == IdDosen) {
-                d=daftarDosen[a];
-                break;
+                return daftarDosen[a];
             }   
         }        
-        return d;
+        return null;
     }
     
     public Dosen getDosenbyIndex(int index) {

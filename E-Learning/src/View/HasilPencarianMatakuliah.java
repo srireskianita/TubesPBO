@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -206,5 +207,4 @@ public class HasilPencarianMatakuliah extends javax.swing.JFrame {
     public JTextArea getTxtMatakuliah() {
         return txtMatakuliah;
     }
-
 }

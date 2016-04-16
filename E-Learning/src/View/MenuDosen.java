@@ -32,7 +32,6 @@ public class MenuDosen extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         btnInputDosen = new javax.swing.JButton();
-        btnHapusTugas = new javax.swing.JButton();
         btnHapusDosen = new javax.swing.JButton();
         btnTambahTugas = new javax.swing.JButton();
         btnHapusMhs = new javax.swing.JButton();
@@ -41,6 +40,7 @@ public class MenuDosen extends javax.swing.JFrame {
         Kembali = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        createKelas = new javax.swing.JButton();
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -50,13 +50,6 @@ public class MenuDosen extends javax.swing.JFrame {
         jLabel1.setText("Halaman Dosen");
 
         btnInputDosen.setText("Input Data Dosen");
-
-        btnHapusTugas.setText("Hapus Tugas Mahasiswa");
-        btnHapusTugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHapusTugasActionPerformed(evt);
-            }
-        });
 
         btnHapusDosen.setText("Hapus Data Dosen");
 
@@ -91,35 +84,42 @@ public class MenuDosen extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Menu Kelas");
 
+        createKelas.setText("Create Kelas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(109, 109, 109))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHapusDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnInputDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCariDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Kembali, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnTambahTugas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTambahMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnHapusMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnHapusTugas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(129, 129, 129)
-                        .addComponent(jLabel1)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnHapusDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnInputDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCariDosen, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Kembali, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnTambahTugas, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                    .addComponent(btnTambahMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnHapusMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(createKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)
+                                .addGap(72, 72, 72)))))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,22 +131,26 @@ public class MenuDosen extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInputDosen)
-                    .addComponent(btnTambahMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCariDosen)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(btnTambahTugas)
+                        .addComponent(btnInputDosen)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnHapusDosen)
-                            .addComponent(btnHapusMhs))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnHapusTugas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addComponent(btnCariDosen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(btnHapusDosen))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(createKelas)
+                                .addGap(11, 11, 11)
+                                .addComponent(btnTambahMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnTambahTugas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnHapusMhs)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)))
                 .addComponent(Kembali)
                 .addContainerGap())
         );
@@ -161,10 +165,6 @@ public class MenuDosen extends javax.swing.JFrame {
     private void btnCariDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariDosenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCariDosenActionPerformed
-
-    private void btnHapusTugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusTugasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapusTugasActionPerformed
 
     private void btnTambahTugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahTugasActionPerformed
         // TODO add your handling code here:
@@ -210,10 +210,10 @@ public class MenuDosen extends javax.swing.JFrame {
     private javax.swing.JButton btnCariDosen;
     private javax.swing.JButton btnHapusDosen;
     private javax.swing.JButton btnHapusMhs;
-    private javax.swing.JButton btnHapusTugas;
     private javax.swing.JButton btnInputDosen;
     private javax.swing.JButton btnTambahMhs;
     private javax.swing.JButton btnTambahTugas;
+    private javax.swing.JButton createKelas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -236,9 +236,7 @@ public class MenuDosen extends javax.swing.JFrame {
         return btnHapusMhs;
     }
 
-    public JButton getBtnHapusTugas() {
-        return btnHapusTugas;
-    }
+    
 
     public JButton getBtnInputDosen() {
         return btnInputDosen;
@@ -250,6 +248,10 @@ public class MenuDosen extends javax.swing.JFrame {
 
     public JButton getBtnTambahTugas() {
         return btnTambahTugas;
+    }
+
+    public JButton getCreateKelas() {
+        return createKelas;
     }
 
 }

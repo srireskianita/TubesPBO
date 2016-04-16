@@ -57,6 +57,10 @@ public class Kelas  {
     public int getJmlMahasiswa() {
         return jmlMahasiswa;
     }
+
+    public int getJumTugas() {
+        return jumTugas;
+    }
     
     public void displayKelas(){
             System.out.println("Kelas: "+getNamakelas());

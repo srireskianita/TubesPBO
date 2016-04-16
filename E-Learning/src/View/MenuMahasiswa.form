@@ -34,7 +34,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="kembali" min="-2" pref="81" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="cariMhs" max="32767" attributes="0"/>
@@ -42,7 +42,10 @@
                           <Component id="HapusMhs" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                      <Component id="pilihKelas" pref="158" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pilihKelas" max="32767" attributes="0"/>
+                          <Component id="LihatInfoKelas" pref="158" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -60,7 +63,10 @@
                   <Component id="pilihKelas" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="cariMhs" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LihatInfoKelas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cariMhs" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="HapusMhs" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="64" max="32767" attributes="0"/>
@@ -87,14 +93,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InputMhsActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="cariMhs">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cari Data Mahasiswa"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cariMhsActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="HapusMhs">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hapus Data Mahasiswa"/>
@@ -115,6 +113,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pilihKelasActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="LihatInfoKelas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lihat Info Kelas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="cariMhs">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cari Data Mahasiswa"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
