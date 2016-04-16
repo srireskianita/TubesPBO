@@ -10,14 +10,14 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Widodo
+ * @author LENOVO X230
  */
-public class DeleteMatakuliah extends javax.swing.JFrame {
+public class PilihKelas extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeleteMatakuliah
+     * Creates new form PilihKelas
      */
-    public DeleteMatakuliah() {
+    public PilihKelas() {
         initComponents();
     }
 
@@ -32,69 +32,69 @@ public class DeleteMatakuliah extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtKodeMatakuliah = new javax.swing.JTextField();
-        Hapus = new javax.swing.JButton();
-        kembali = new javax.swing.JButton();
+        txtKelas = new javax.swing.JTextField();
+        Tambah = new javax.swing.JButton();
+        Kembali = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        txtKodeMK = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Hapus Matakuliah");
+        jLabel1.setText("Pilih Kelas");
 
-        jLabel2.setText("Kode Matkuliah");
+        jLabel2.setText("Kelas");
 
-        Hapus.setText("Hapus");
-        Hapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HapusActionPerformed(evt);
-            }
-        });
+        Tambah.setText("Tambah");
 
-        kembali.setText("Kembali");
+        Kembali.setText("Kembali");
+
+        jLabel3.setText("Kode Matakuliah");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel2)
-                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtKelas)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Hapus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(kembali))
-                            .addComponent(txtKodeMatakuliah, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                                .addComponent(Tambah)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                                .addComponent(Kembali))
+                            .addComponent(txtKodeMK))))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel1)
                 .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtKodeMatakuliah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
+                    .addComponent(txtKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Hapus)
-                    .addComponent(kembali))
-                .addContainerGap(106, Short.MAX_VALUE))
+                    .addComponent(jLabel3)
+                    .addComponent(txtKodeMK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Tambah)
+                    .addComponent(Kembali))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void HapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HapusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HapusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,44 +113,48 @@ public class DeleteMatakuliah extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeleteMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilihKelas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeleteMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilihKelas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeleteMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilihKelas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeleteMatakuliah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilihKelas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeleteMatakuliah().setVisible(true);
+                new PilihKelas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Hapus;
+    private javax.swing.JButton Kembali;
+    private javax.swing.JButton Tambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton kembali;
-    private javax.swing.JTextField txtKodeMatakuliah;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txtKelas;
+    private javax.swing.JTextField txtKodeMK;
     // End of variables declaration//GEN-END:variables
 
-    public JButton getHapus() {
-        return Hapus;
-    }
-
     public JButton getKembali() {
-        return kembali;
+        return Kembali;
     }
 
-    public JTextField getTxtKodeMatakuliah() {
-        return txtKodeMatakuliah;
+    public JButton getTambah() {
+        return Tambah;
     }
 
+    public JTextField getTxtKelas() {
+        return txtKelas;
+    }
+
+    public JTextField getTxtKodeMK() {
+        return txtKodeMK;
+    }
 
 }

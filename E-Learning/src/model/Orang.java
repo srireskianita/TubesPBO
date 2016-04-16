@@ -12,7 +12,7 @@ package model;
 public abstract class Orang{
 	private String nama;
 	private long id;
-	private String status;
+	//private String status;
 	
 	public String getNama(){
 		return nama;
@@ -20,12 +20,12 @@ public abstract class Orang{
 	public void setNama(String nama){
 		this.nama=nama;
 	}
-	public String getStatus(){
-		return status;
-	}
-	public void setStatus(String status){
-		this.status=status;
-	}
+//	public String getStatus(){
+//		return status;
+//	}
+//	public void setStatus(String status){
+//		this.status=status;
+//	}
 	
 	public long getId(){
 		return id;
@@ -33,9 +33,9 @@ public abstract class Orang{
 	public void setId(long id){
 		this.id=id;
 	}
-	public Orang(String status){
-		setStatus(status);
-	}
+//	public Orang(String status){
+//		setStatus(status);
+//	}
 	public Orang(String nama, long id){
 		setNama(nama);
 		setId(id);
