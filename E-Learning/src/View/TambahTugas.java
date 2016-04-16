@@ -280,6 +280,14 @@ public class TambahTugas extends javax.swing.JFrame {
         return txtNamaMK;
     }
 
+    public JTextField getTxtDesk() {
+        return txtDesk;
+    }
+
+    public JTextField getTxtNip() {
+        return txtNip;
+    }
+
     public JButton getKembali() {
         return Kembali;
     }

@@ -35,6 +35,23 @@ public class Kelas  {
 		jmlMahasiswa++;
 	} 
     }
+    public void removeMahasiswa(long IdMhs) {
+        int a = 0;
+        for (a=0; a<anggota.length; a++) {
+            if ( anggota[a].getId() == IdMhs) {
+                break;
+            }
+        }
+        anggota[a] = null;
+        for (int b=0;b<anggota.length;b++) {
+            if (anggota[b] == null) {
+                while(b<(anggota.length-b)){
+                   anggota[b] = anggota[b+1];
+                    b++;
+                }
+            }
+        }
+    }
     public Mahasiswa getMahasiswabyIndex(int index){
        return anggota[index];
     }

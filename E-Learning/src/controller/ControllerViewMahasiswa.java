@@ -104,7 +104,9 @@ public class ControllerViewMahasiswa implements ActionListener{
         tg.getKembali().addActionListener(this);
         cd.getKembali().addActionListener(this);
         tm.getKembali().addActionListener(this);
+        tm.getBtnSubmit().addActionListener(this);
         dm.getKembali().addActionListener(this);
+        dm.getHapus().addActionListener(this);
         hpd.getKembali().addActionListener(this);
         mm.getLihatInfoKelas().addActionListener(this);
         lik.getCari().addActionListener(this);
@@ -153,15 +155,10 @@ public class ControllerViewMahasiswa implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         Object o = ae.getSource();
         
-//        if(o.equals(this.cm.getCari())){
-//            JOptionPane.showMessageDialog(null, "123");
-//        }
-        if(o.equals(mu.getMenuMhs())){
-            mm.setVisible(true);
-            mu.dispose();
-        }
+
+       
        //Menu dosen
-        else if (o.equals(mu.getMenuDosen())){
+       if (o.equals(mu.getMenuDosen())){
             md.setVisible(true);
             mu.dispose();
         }
@@ -201,11 +198,13 @@ public class ControllerViewMahasiswa implements ActionListener{
         }
         else if(o.equals(tg.getSubmit())){
             String Kelas = tg.getTxtKelas().getText();
+            long nip= Long.parseLong(tg.getTxtNip().getText());
             String KodeMk = tg.getTxtKodeMK().getText();
             String NamaMk = tg.getTxtNamaMK().getText();
             String KodeTugas = tg.getTxtKodeTugas().getText();
             String Desk=tg.getDeskripsi().getText();
-           
+            
+            app.getDosen(nip).getKelasbyKodeKelas(Kelas).createTugas(KodeTugas, Desk);
             JOptionPane.showMessageDialog(null, "Input berhasil");
         }
        else if( o.equals(tg.getKembali())){
@@ -235,7 +234,18 @@ public class ControllerViewMahasiswa implements ActionListener{
         }
         else if (o.equals(md.getBtnTambahMhs())){
             tm.setVisible(true);
+            tm.showListKelas(app);
             md.dispose();
+        }
+        else if (o.equals(tm.getBtnSubmit())){
+            String kelas= tm.getTxtKelas().getSelectedItem().toString();
+            long nim=Long.parseLong(tm.getTxtNim().getText());
+            long nip=Long.parseLong(tm.getTxtNip().getText());
+            Mahasiswa m= app.getMahasiswabyNim(nim);
+             
+            app.getDosen(nip).getKelasbyKodeKelas(kelas).addMahasiswa(m);
+            
+            JOptionPane.showMessageDialog(null,"Mahasiswa berhasil ditambah");
         }
         else if(o.equals(tm.getKembali())){
             md.setVisible(true);
@@ -248,6 +258,16 @@ public class ControllerViewMahasiswa implements ActionListener{
         else if(o.equals(dm.getKembali())){
             md.setVisible(true);
             dm.dispose();
+        }
+        else if (o.equals(dm.getHapus())){
+            String kelas= dm.getTxtKelas().getText();
+            long nim=Long.parseLong(dm.getTxtNim().getText());
+            long nip=Long.parseLong(dm.getTxtNip().getText());
+            
+            Mahasiswa m=app.getMahasiswabyNim(nim);
+            app.getDosen(nip).getKelasbyKodeKelas(kelas).removeMahasiswa(nim);
+            
+            JOptionPane.showMessageDialog(null, "Mahasiswa Berhasil dihapus");
         }
         else if(o.equals(md.getKembali())){
             mu.setVisible(true);
@@ -270,6 +290,10 @@ public class ControllerViewMahasiswa implements ActionListener{
             ck.dispose();
         }
         //menu mhs
+        else if(o.equals(mu.getMenuMhs())){
+            mm.setVisible(true);
+            mu.dispose();
+        }
         else if(o.equals(mm.getInputMhs())){
             idm.setVisible(true);
             mm.dispose();

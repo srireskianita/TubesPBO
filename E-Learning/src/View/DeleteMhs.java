@@ -37,6 +37,8 @@ public class DeleteMhs extends javax.swing.JFrame {
         kembali = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtKelas = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtNip = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +64,8 @@ public class DeleteMhs extends javax.swing.JFrame {
 
         jLabel3.setText("Kelas");
 
+        jLabel4.setText("NIP Dosen");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,23 +73,24 @@ public class DeleteMhs extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(Hapus)
-                        .addGap(31, 31, 31)
-                        .addComponent(kembali))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(38, 38, 38)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Hapus)
+                                .addGap(18, 18, 18)
+                                .addComponent(kembali))
                             .addComponent(txtNim)
-                            .addComponent(txtKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                            .addComponent(txtKelas, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                            .addComponent(txtNip))))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,11 +105,15 @@ public class DeleteMhs extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtNip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Hapus)
                     .addComponent(kembali))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
@@ -158,9 +167,11 @@ public class DeleteMhs extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton kembali;
     private javax.swing.JTextField txtKelas;
     private javax.swing.JTextField txtNim;
+    private javax.swing.JTextField txtNip;
     // End of variables declaration//GEN-END:variables
 
     public JButton getHapus() {
@@ -177,6 +188,10 @@ public class DeleteMhs extends javax.swing.JFrame {
 
     public JTextField getTxtKelas() {
         return txtKelas;
+    }
+
+    public JTextField getTxtNip() {
+        return txtNip;
     }
 
 }
