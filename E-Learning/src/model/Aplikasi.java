@@ -25,7 +25,6 @@ public class Aplikasi {
         daftarDosen = fio.getDosen();
         daftarMahasiswa = fio.getMhs();
         daftarMatakuliah = fio.getMatkul();
-        
 
     }
 

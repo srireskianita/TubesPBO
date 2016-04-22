@@ -78,6 +78,11 @@ public class Kelas  {
     public int getJumTugas() {
         return jumTugas;
     }
+
+//    @Override
+//    public String toString() {
+//        return "Kelas{" + "anggota=" + anggota + ", jmlMahasiswa=" + jmlMahasiswa + ",\n namaKelas=" + namaKelas + ",\n tugas=" + tugas + ", jumTugas=" + jumTugas + ", Matakuliah=" + Matakuliah + '}';
+//    }
     
     public void displayKelas(){
             System.out.println("Kelas: "+getNamakelas());

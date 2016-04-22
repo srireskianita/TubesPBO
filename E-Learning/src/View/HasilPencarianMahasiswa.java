@@ -76,7 +76,8 @@ public class HasilPencarianMahasiswa extends javax.swing.JFrame {
                 .addGap(52, 52, 52))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(416, 338));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

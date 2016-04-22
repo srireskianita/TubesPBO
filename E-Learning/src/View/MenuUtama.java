@@ -117,7 +117,8 @@ public class MenuUtama extends javax.swing.JFrame {
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(571, 375));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuDosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDosenActionPerformed

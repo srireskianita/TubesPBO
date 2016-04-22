@@ -155,7 +155,8 @@ public class MenuDosen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pack();
+        setSize(new java.awt.Dimension(469, 362));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTambahMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahMhsActionPerformed

@@ -130,6 +130,7 @@ public class ControllerViewMahasiswa implements ActionListener{
         mm.getPilihKelas().addActionListener(this);
         pk.getTambah().addActionListener(this);
         pk.getKembali().addActionListener(this);
+       
         
         
         //Listener semua tombol pada semua Halaman menu lain
@@ -228,7 +229,7 @@ public class ControllerViewMahasiswa implements ActionListener{
             hpd.setVisible(true);
             cd.dispose();
            
-            hpd.getTxtHasilCariDosen().append(app.getDosen(nip).toString()+"\n");
+            hpd.getTxtHasilCariDosen().setText(app.getDosen(nip).toString()+"\n");
         }
         //untuk kembali ke halaman cari dosen
         else if(o.equals(hpd.getKembali())){
@@ -345,7 +346,7 @@ public class ControllerViewMahasiswa implements ActionListener{
             cm.dispose();
             System.out.println(app.getMahasiswabyNim(nim).getNama());
             System.out.println(app.getMahasiswabyNim(nim).getId());
-            hpm.getTxthasilcarimhs().append(app.getMahasiswabyNim(nim).toString()+"\n");
+            hpm.getTxthasilcarimhs().setText(app.getMahasiswabyNim(nim).toString()+"\n");
             
         }
         ////untuk menuju ke Halaman cari mhs
@@ -378,19 +379,21 @@ public class ControllerViewMahasiswa implements ActionListener{
         ////untuk menuju ke Halaman pilih kelas
         else if (o.equals(mm.getPilihKelas())){
             pk.setVisible(true);
+            pk.showListKelas(app);
             mm.dispose();
         }
-        //untuk bergabung/ masuk ke kelas
+        //untuk bergabung atau masuk ke kelas
         else if (o.equals(pk.getTambah())){
-            String kelas= tm.getTxtKelas().getSelectedItem().toString();
-            long nim=Long.parseLong(tm.getTxtNim().getText());
-            long nip=Long.parseLong(tm.getTxtNip().getText());
+            String kelas= pk.getTxtKelas().getSelectedItem().toString();
+            long nim=Long.parseLong(pk.getTxtNim().getText());
+            long nip=Long.parseLong(pk.getTxtNip().getText());
             Mahasiswa m= app.getMahasiswabyNim(nim);
              
             app.getDosen(nip).getKelasbyKodeKelas(kelas).addMahasiswa(m);
             
             JOptionPane.showMessageDialog(null,"Mahasiswa berhasil ditambah");
         }
+       
         ////untuk kembali ke halaman memu mhs
         else if (o.equals(pk.getKembali())){
             mm.setVisible(true);
@@ -404,7 +407,10 @@ public class ControllerViewMahasiswa implements ActionListener{
         //untuk mencari data kelas yg ingin ditampilkan
         else if (o.equals(lik.getCari())){
             String kelas=lik.getTxtKelas().getText();
+            long nip=Long.parseLong(lik.getTxtNip().getText());
+            lik.getTxtInfo().setText(app.getDosen(nip).toString()+"\n");
             
+ 
         }
         //untuk menuju ke Halaman menu mhs
         else if( o.equals(lik.getKembali())){
@@ -413,17 +419,17 @@ public class ControllerViewMahasiswa implements ActionListener{
         }
         
         //Menu Lain
-        ////untuk menuju ke Halaman menu Lain
+        //untuk menuju ke Halaman menu Lain
         else if(o.equals(mu.getMenuLain())){
             lain.setVisible(true);
             mu.dispose();
         }
-        ////untuk kembali ke Halaman menu utama
+       //untuk kembali ke Halaman menu utama
         else if(o.equals(lain.getKembali())){
             mu.setVisible(true);
             lain.dispose();
         }
-        ////untuk menuju ke Halaman Input data MK
+        //untuk menuju ke Halaman Input data MK
         else if (o.equals(lain.getInputMK())){
             imk.setVisible(true);
             lain.dispose();

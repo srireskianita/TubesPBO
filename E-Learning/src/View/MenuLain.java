@@ -108,7 +108,8 @@ public class MenuLain extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(481, 360));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void InputMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputMKActionPerformed

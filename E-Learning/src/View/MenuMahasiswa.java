@@ -115,7 +115,8 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(447, 368));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void InputMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputMhsActionPerformed

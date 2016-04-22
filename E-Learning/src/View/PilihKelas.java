@@ -5,10 +5,12 @@
  */
 package View;
 
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import model.Aplikasi;
+import model.Kelas;
 
 /**
  *
@@ -108,7 +110,8 @@ public class PilihKelas extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(416, 334));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

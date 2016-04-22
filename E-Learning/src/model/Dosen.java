@@ -77,15 +77,15 @@ public class Dosen extends Orang implements Serializable {
 
     @Override
     public String toString() {
-        String nama = "nama : " + getNama() + "\n";
-        String nip = "nip : " + super.getId() + "\n";
-        String dKelas = "";
+        String nama = "Nama Dosen   : " + getNama() + "\n";
+        String nip = "NIP Dosen  : " + super.getId() + "\n";
+        String dKelas = "Kelas : ";
         for (int i = 0; i < this.jumKelas; i++) {
-            dKelas += daftarkelas[i].getNamakelas() + "\ndaftar mahasiswa:\n";
+            dKelas += daftarkelas[i].getNamakelas() + "\nDaftar mahasiswa:\n";
             for (int j = 0; j < daftarkelas[i].getJmlMahasiswa(); j++) {
                 dKelas += daftarkelas[i].getMahasiswabyIndex(j).getNama() + "\n";
             }
-            dKelas += "daftar tugas:\n";
+            dKelas += "\nDaftar tugas:\n";
             for (int j = 0; j < daftarkelas[i].getJumTugas(); j++) {
                 dKelas += daftarkelas[i].getTugas(j).getDesk() + "\n";
 
